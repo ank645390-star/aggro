@@ -55,6 +55,26 @@
   overflow: hidden;
 }
 
+/* Decorative leaf photo (macro green leaf with backlit veins).
+   Sits behind everything else inside .bgDecor — above the green
+   gradient on .stickyInner, below the orbs / veins / dot grid.
+   Positioned to the RIGHT-EDGE of the section so it peeks behind
+   the "04 Результат" card without overlapping the left-column text.
+   Tinted heavily towards the section's deep green via mix-blend-mode
+   + opacity so it reads as ambient texture, not a literal photo. */
+.leafBg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/tech-leaf-bg.webp?v=1");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 130%;
+  opacity: 0.32;
+  mix-blend-mode: screen;
+  filter: hue-rotate(-10deg) saturate(0.9);
+  pointer-events: none;
+}
+
 /* Soft blurred bokeh orbs — adds depth + subtle motion-ready feel */
 .orb {
   position: absolute;
@@ -173,11 +193,17 @@
 /* ---------- step indicator (4 КЛІКАБЕЛЬНІ точки) ---------- */
 .stepIndicator {
   position: absolute;
+  /* Centred underneath the right-hand card stack (cards live at
+     `right: 60px; width: 753px`), so the dots visually belong to the
+     slider they control instead of floating in the empty bottom-left. */
   bottom: 36px;
-  left: 120px;
+  right: 60px;
+  left: auto;
+  width: 753px;
   z-index: 6;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
 }
 .stepDot {

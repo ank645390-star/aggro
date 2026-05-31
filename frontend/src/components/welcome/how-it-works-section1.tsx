@@ -589,6 +589,8 @@ const HowItWorksSection1: React.FC<HowItWorksSection1Type> = ({
             soft bokeh orbs + topographic veins + subtle dot grid.
             Anim/text/CTA untouched. */}
         <div className={styles.bgDecor} aria-hidden="true">
+          {/* Decorative leaf photo — sits at the very back of .bgDecor */}
+          <span className={styles.leafBg} />
           <span className={[styles.orb, styles.orbA].join(" ")} />
           <span className={[styles.orb, styles.orbB].join(" ")} />
           <span className={[styles.orb, styles.orbC].join(" ")} />
