@@ -1,0 +1,91 @@
+# ─── Dependencies ────────────────────────────────────────────────────────
+node_modules/
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+.yarn/cache
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# ─── Build artifacts ─────────────────────────────────────────────────────
+/build
+/dist
+dist/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.cache/
+
+# ─── Tests / coverage ────────────────────────────────────────────────────
+/coverage
+test_reports/
+.pytest_cache/
+
+# ─── Environment & secrets (NEVER commit these) ──────────────────────────
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+backend/.env
+frontend/.env
+*token.json*
+*credentials.json*
+*.pem
+*.key
+
+# ─── Backend / Python ────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+env/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Backend runtime data
+backend/uploads/
+backend/.uploads/
+backend/dump.rdb
+
+# ─── Logs ────────────────────────────────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+# ─── Editor / OS ─────────────────────────────────────────────────────────
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.ipynb_checkpoints/
+
+# ─── Deployment ──────────────────────────────────────────────────────────
+.vercel
+.netlify
+.serverless/
+
+# ─── Archives & large binaries ───────────────────────────────────────────
+*.zip
+*.tar.gz
+*.tar
+*.tgz
+*.pack
+*.deb
+*.dylib
+
+# ─── Emergent-platform internals ─────────────────────────────────────────
+.emergent/
+memory/test_credentials.md
+plan.md
+design_guidelines.md
+test_result.md

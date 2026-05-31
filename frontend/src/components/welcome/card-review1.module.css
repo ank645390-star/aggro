@@ -1,0 +1,66 @@
+.cardReview,
+.reviewContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.cardReview {
+  height: var(--height-404);
+  width: var(--width-541);
+  border-radius: var(--br-6);
+  background-color: var(--bg-cream);
+  border: var(--border-5);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: var(--padding-32);
+  gap: var(--gap-78);
+  text-align: left;
+  font-size: var(--fs-18);
+  color: var(--text-black);
+  font-family: var(--font-golos-text);
+}
+.reviewContent {
+  align-self: stretch;
+  gap: var(--gap-24);
+}
+.author,
+.div {
+  position: relative;
+}
+.div {
+  width: 100%;
+  line-height: 140%;
+  display: inline-block;
+  max-width: var(--max-w-700);
+}
+.author {
+  align-self: stretch;
+  line-height: 120%;
+  font-weight: 600;
+}
+
+
+/* ───── Mobile (≤ 768px) ───── */
+@media screen and (max-width: 768px) {
+  .cardReview {
+    width: 100%;
+    height: auto;
+    min-height: 280px;
+    padding: 22px 20px;
+    gap: 24px;
+  }
+  .reviewContent {
+    gap: 16px;
+  }
+  .div {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .author {
+    font-size: 15px;
+    white-space: normal;
+    line-height: 1.3;
+  }
+}
